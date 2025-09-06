@@ -1,0 +1,129 @@
+Got it ✅ You need a *clear, clean, accurate “How to Run” document* for your final integrated project, suitable to send to CTS. Here’s a ready-to-use version:
+
+---
+
+# 📘 How to Run the Project
+
+## 1. Prerequisites
+
+* *Node.js* (v18 or above recommended)
+  👉 Download from [https://nodejs.org](https://nodejs.org)
+* *npm* (comes with Node.js)
+* A Supabase account (for authentication backend)
+
+---
+
+## 2. Clone / Extract the Project
+
+1. Download or clone the project repository / ZIP.
+2. Extract it to a folder, e.g.:
+
+   
+   C:\Users\<YourName>\SDOH-Health-Platform
+   
+3. Open the folder in *VS Code* or your terminal.
+
+---
+
+## 3. Install Dependencies
+
+In the project root (where package.json exists), run:
+
+bash
+npm install
+
+
+This will install all required libraries:
+
+* react, react-dom, react-router-dom
+* @supabase/supabase-js
+* papaparse
+* react-icons
+* vite (for dev server)
+
+---
+
+## 4. Environment Variables
+
+Create a file named **.env** in the project root and add:
+
+
+VITE_SUPABASE_URL=<your-supabase-project-url>
+VITE_SUPABASE_ANON_KEY=<your-supabase-anon-key>
+VITE_APP_REDIRECT=http://localhost:5173/login
+
+
+> ⚠ Replace <your-supabase-project-url> and <your-supabase-anon-key> with your Supabase project’s credentials (from Supabase Dashboard → Project Settings → API).
+
+---
+
+## 5. Run the Development Server
+
+Start the local server:
+
+bash
+npm run dev
+
+
+The terminal will show something like:
+
+
+VITE v5.0.0  ready in 1500ms
+Local:   http://localhost:5173/
+
+
+---
+
+## 6. Open in Browser
+
+* Go to *[http://localhost:5173](http://localhost:5173)* in your browser.
+* Use the Navbar to navigate: *Home, About, Services, Contact, Login, Register*.
+
+---
+
+## 7. Authentication Flow
+
+* *Register* → Create a new account.
+* *Login* → Login with email/password or Google.
+* If login email is samikshapraveen080@gmail.com → Redirects to *Dashboard*.
+* Other users → Redirect to *Home*.
+* *Logout* available via Navbar (profile icon dropdown).
+
+---
+
+## 8. Dashboard
+
+* Loads SDOH dataset from public/data/final_consolidated_SDOH_dataset.csv.
+* Displays 10 analytical cards + 3 placeholders (for ML integration).
+* Clicking a card opens detailed insights and recommended interventions.
+
+---
+
+## 9. Services
+
+* Provides quick access to:
+
+  * E-Health Card (/userinfo)
+  * Community Risk Map (/map)
+  * Patient Registration
+  * Dashboards (Govt, User Prediction, Analysis → open in new tab at http://localhost:8501)
+
+---
+
+## 10. Stop the Server
+
+Press:
+
+
+CTRL + C
+
+
+in the terminal to stop the app.
+
+---
+
+✅ That’s it! The project is now up and running locally.
+
+---
+
+👉 Do you want me to also prepare a *1-page polished PDF version* of this (formatted with headings, bullets, bold), so you can send it directly without editing?
